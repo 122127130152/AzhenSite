@@ -1,0 +1,13 @@
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <h3><%= @article.title %> </h3>
+    &nbsp;&nbsp;
+    <small><%= @article.publish_time.to_s(:db) %></small>
+
+  </div>
+  <div class="panel-body">
+    <p><%=raw @article.content %></p></p>
+  </div>
+</div>

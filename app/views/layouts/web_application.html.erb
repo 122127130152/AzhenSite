@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AzhenSite</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">AzhenSite</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+		    <li class="<%= controller_name == "home" ? "active" : ""%>">
+		      <%= link_to(root_path) do %>
+                袁阿珍技术站点<span class="sr-only">(current)</span>
+		      <% end %>
+		    </li>
+		    <li class="<%= controller_name == "articles" ? "active" : "" %>">
+		      <%= link_to '技术文章', articles_path %>
+		    </li>
+		  </ul> 
+		</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+		</nav>
+    <%= yield %>
+  </body>
+
+  
+</html>

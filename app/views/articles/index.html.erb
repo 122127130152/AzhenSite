@@ -1,0 +1,12 @@
+<ul class="list-group">
+  <li class="list-group-item">技术文章</li>
+  <% @articles.each do |article| %>
+    <li class="list-group-item"><%= link_to article.title, article_path(article) %> <%= article.publish_time.to_s(:db) %></li>
+  <% end %>
+</ul>
+
+
+
+
+
+<%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
