@@ -5,11 +5,11 @@
   </tr>
   <tr>
     <th><strong>内容:</strong></th>
-    <th><%= @article.content %></th>
+    <th><%=raw @article.content %></th>
   </tr>
   <tr>
     <th><strong>发布时间：</strong></th>
-    <th><%= @article.publish_time %></th>
+    <th><%= @article.publish_time.to_s(:db) if @article.publish_time %></th>
   </tr>
   <tr>
     <th><strong>发布状态：</strong></th>

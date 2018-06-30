@@ -13,6 +13,10 @@ gem 'bootstrap-sass',    '3.3.6'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 
+# kindeditor
+gem 'jquery-rails'
+gem 'rails_kindeditor'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
