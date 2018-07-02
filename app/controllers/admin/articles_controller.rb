@@ -2,7 +2,7 @@ class Admin::ArticlesController < AdminBaseController
   before_action :set_articles, only: [:show, :edit, :update, :destroy]
   # GET /admin/articles
   def index
-    @articles = Article.paginate(:page => params[:page], :per_page => 5)
+    @articles = Article.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /admin/articles/1
